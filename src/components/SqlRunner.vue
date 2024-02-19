@@ -95,8 +95,8 @@
 }
 
 .sql-history {
-  height: 100%;
-
+  max-height: 500px;
+  overflow-y: auto;
   /*padding: 10px;*/
 }
 
@@ -193,11 +193,8 @@ export default defineComponent({
   }
   ,
   beforeCreate() {
-    fetch('test/getSchema').then(res => {
-      return res.json()
-    }).then(data => {
-      this.extensions = [sql({schema: data}), oneDark];
-    })
+    const json = require("@/assets/schema.json");
+    this.extensions = [sql({schema: json}), oneDark];
   },
   mounted() {
     key('ctrl+alt+l', () => {
