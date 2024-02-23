@@ -192,11 +192,9 @@ export default defineComponent({
     }
   }
   ,
-  beforeCreate() {
+  mounted() {
     const json = require("@/assets/schema.json");
     this.extensions = [sql({schema: json}), oneDark];
-  },
-  mounted() {
     key('ctrl+alt+l', () => {
       this.code = format(this.code);
       return false

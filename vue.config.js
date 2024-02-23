@@ -13,7 +13,7 @@ module.exports = defineConfig({
     },
     transpileDependencies: true,
     devServer: {
-        proxy:"http://localhost:1234/",
+        proxy:"http://rtgoods-revert-portal-new.beta1.fn/",
         allowedHosts: [
             "local.beta1.fn"
         ],
