@@ -18,5 +18,8 @@ export default defineComponent({
 </script>
 
 <style>
-
+#app {
+  height: 100%;
+  padding: 5px;
+}
 </style>
